@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.9.0)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - SwiftLint (0.35.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - R.swift
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - R.swift
+    - R.swift.Library
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
+
+PODFILE CHECKSUM: 6aeb202cf40e1b134751a15ed2b91f2ffbff5446
+
+COCOAPODS: 1.7.5
