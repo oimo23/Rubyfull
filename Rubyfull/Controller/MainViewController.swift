@@ -58,6 +58,15 @@ class ViewController: UIViewController {
         self.present(Alert, animated: true, completion: nil)
     }
     
+    @IBAction func OKButtonTapped(_ sender: Any) {
+        if(self.inputtedText.text!.count == 0) {
+            showErrorAlert(errorMessage: "入力が空です")
+            return
+        }
+        
+        getHiraganaDataFromAPI()
+    }
+    
     // MARK: - 画面更新
     /***************************************************************/
     func updateUI() {
