@@ -14,6 +14,11 @@ class ViewController: UIViewController {
     /***************************************************************/
     @IBOutlet private weak var inputtedText: UITextField!
     @IBOutlet private weak var converted: UILabel!
+    
+    // MARK: - 必要なモデルのインスタンス化
+    /***************************************************************/
+    private var textData = TextDataModel()
+    private let apiClient = APIClient()
 
 }
 
