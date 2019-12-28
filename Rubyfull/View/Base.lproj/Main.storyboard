@@ -55,7 +55,6 @@
                     </view>
                     <connections>
                         <outlet property="converted" destination="UIo-Nr-dNR" id="jT9-oe-xvP"/>
-                        <outlet property="hiraganaText" destination="UIo-Nr-dNR" id="fjc-qQ-hRu"/>
                         <outlet property="inputtedText" destination="GFg-pV-UDt" id="MWS-Og-vHD"/>
                     </connections>
                 </viewController>
