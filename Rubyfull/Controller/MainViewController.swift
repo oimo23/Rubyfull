@@ -37,11 +37,11 @@ class ViewController: UIViewController {
                 
                 switch error {
                   case .requestError:
-                    self?.showErrorAlert(errorTitle:"エラーが発生しました", errorMessage: "リクエストエラー")
+                    self?.showErrorAlert(errorMessage: "リクエストエラー")
                   case .responseError:
-                    self?.showErrorAlert(errorTitle:"エラーが発生しました", errorMessage: "レスポンスエラー")
+                    self?.showErrorAlert(errorMessage: "レスポンスエラー")
                   case .unknownError:
-                    self?.showErrorAlert(errorTitle:"エラーが発生しました", errorMessage: "不明なエラー")
+                    self?.showErrorAlert(errorMessage: "不明なエラー")
                 }
             }
         }
@@ -49,8 +49,8 @@ class ViewController: UIViewController {
     
     // MARK: - エラーアラートを出す
     /***************************************************************/
-    func showErrorAlert(errorTitle: String, errorMessage: String) {
-        let Alert: UIAlertController = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
+    func showErrorAlert(errorMessage: String) {
+        let Alert: UIAlertController = UIAlertController(title: "エラーが発生しました", message: errorMessage, preferredStyle: .alert)
         
         let CloseAction = UIAlertAction(title: "閉じる", style: .default)
         Alert.addAction(CloseAction)
