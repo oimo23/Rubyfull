@@ -19,6 +19,33 @@ class ViewController: UIViewController {
     /***************************************************************/
     private var textData = TextDataModel()
     private let apiClient = APIClient()
+    
+    // MARK: - APIとの通信
+    /***************************************************************/
+    func getHiraganaDataFromAPI() {
+        self.apiClient.getHiraganaData(inputtedText: self.inputtedText.text!) { [weak self] result in
+            switch result {
+              case .success(let textData):
+                  // textDataの中身を受け取ったものに更新する
+                  self?.textData = textData
+                  
+                  // 固まらないようメインスレッドでUIの更新をする
+                  DispatchQueue.main.async {
+                      self?.updateUI()
+                  }
+              case .failure(let error):
+                
+                switch error {
+                  case .requestError:
+                    self?.showErrorAlert(errorTitle:"エラーが発生しました", errorMessage: "リクエストエラー")
+                  case .responseError:
+                    self?.showErrorAlert(errorTitle:"エラーが発生しました", errorMessage: "レスポンスエラー")
+                  case .unknownError:
+                    self?.showErrorAlert(errorTitle:"エラーが発生しました", errorMessage: "不明なエラー")
+                }
+            }
+        }
+    }
 
 }
 
