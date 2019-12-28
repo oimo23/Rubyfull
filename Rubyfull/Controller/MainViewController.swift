@@ -57,6 +57,12 @@ class ViewController: UIViewController {
         
         self.present(Alert, animated: true, completion: nil)
     }
+    
+    // MARK: - 画面更新
+    /***************************************************************/
+    func updateUI() {
+        self.converted.text = self.textData.converted
+    }
 
 }
 
