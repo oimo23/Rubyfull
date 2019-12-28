@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -107,7 +107,6 @@
 				F78931F87E7D9F005DAE3DE1 /* Pods-RubyfullUITests.debug.xcconfig */,
 				D1850E196200A36319903B7B /* Pods-RubyfullUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -146,6 +145,7 @@
 		C363BE1D23B3C0CB001776D9 /* Rubyfull */ = {
 			isa = PBXGroup;
 			children = (
+				C363BE2C23B3C0CD001776D9 /* Info.plist */,
 				C363BE5123B3C224001776D9 /* Others */,
 				C363BE5023B3C21D001776D9 /* Controller */,
 				C363BE4F23B3C216001776D9 /* View */,
@@ -205,7 +205,6 @@
 				C363BE2023B3C0CB001776D9 /* SceneDelegate.swift */,
 				C363BE2723B3C0CD001776D9 /* Assets.xcassets */,
 				C363BE2923B3C0CD001776D9 /* LaunchScreen.storyboard */,
-				C363BE2C23B3C0CD001776D9 /* Info.plist */,
 			);
 			path = Others;
 			sourceTree = "<group>";

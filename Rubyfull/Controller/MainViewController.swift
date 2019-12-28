@@ -13,13 +13,7 @@ class ViewController: UIViewController {
     // MARK: - IBOutletsの設定
     /***************************************************************/
     @IBOutlet private weak var inputtedText: UITextField!
-    @IBOutlet private weak var hiraganaText: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
+    @IBOutlet private weak var converted: UILabel!
 
 }
 
