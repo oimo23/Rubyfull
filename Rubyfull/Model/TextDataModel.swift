@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct TextDataModel: Decodable {
+  private(set) var converted: String = ""
+}
