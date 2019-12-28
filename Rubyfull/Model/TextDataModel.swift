@@ -9,5 +9,5 @@
 import Foundation
 
 struct TextDataModel: Decodable {
-  private(set) var converted: String = ""
+    private(set) var converted: String = ""
 }

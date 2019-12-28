@@ -9,64 +9,64 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     // MARK: - IBOutletsの設定
     /***************************************************************/
     @IBOutlet private weak var inputtedText: UITextField!
     @IBOutlet private weak var converted: UILabel!
-    
+
     // MARK: - 必要なモデルのインスタンス化
     /***************************************************************/
     private var textData = TextDataModel()
     private let apiClient = APIClient()
-    
+
     // MARK: - APIとの通信
     /***************************************************************/
     func getHiraganaDataFromAPI() {
         self.apiClient.getHiraganaData(inputtedText: self.inputtedText.text!) { [weak self] result in
             switch result {
-              case .success(let textData):
-                  // textDataの中身を受け取ったものに更新する
-                  self?.textData = textData
-                  
-                  // 固まらないようメインスレッドでUIの更新をする
-                  DispatchQueue.main.async {
-                      self?.updateUI()
-                  }
-              case .failure(let error):
-                
+            case .success(let textData):
+                // textDataの中身を受け取ったものに更新する
+                self?.textData = textData
+
+                // 固まらないようメインスレッドでUIの更新をする
+                DispatchQueue.main.async {
+                    self?.updateUI()
+                }
+            case .failure(let error):
+
                 switch error {
-                  case .requestError:
+                case .requestError:
                     self?.showErrorAlert(errorMessage: "リクエストエラー")
-                  case .responseError:
+                case .responseError:
                     self?.showErrorAlert(errorMessage: "レスポンスエラー")
-                  case .unknownError:
+                case .unknownError:
                     self?.showErrorAlert(errorMessage: "不明なエラー")
                 }
             }
         }
     }
-    
+
     // MARK: - エラーアラートを出す
     /***************************************************************/
     func showErrorAlert(errorMessage: String) {
-        let Alert: UIAlertController = UIAlertController(title: "エラーが発生しました", message: errorMessage, preferredStyle: .alert)
-        
+        let Alert = UIAlertController(title: "エラーが発生しました", message: errorMessage, preferredStyle: .alert)
+
         let CloseAction = UIAlertAction(title: "閉じる", style: .default)
         Alert.addAction(CloseAction)
-        
+
         self.present(Alert, animated: true, completion: nil)
     }
-    
+
     @IBAction func OKButtonTapped(_ sender: Any) {
         if(self.inputtedText.text!.count == 0) {
             showErrorAlert(errorMessage: "入力が空です")
             return
         }
-        
+
         getHiraganaDataFromAPI()
     }
-    
+
     // MARK: - 画面更新
     /***************************************************************/
     func updateUI() {
@@ -74,4 +74,3 @@ class ViewController: UIViewController {
     }
 
 }
-
