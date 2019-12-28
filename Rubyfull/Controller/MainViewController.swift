@@ -46,6 +46,17 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    // MARK: - エラーアラートを出す
+    /***************************************************************/
+    func showErrorAlert(errorTitle: String, errorMessage: String) {
+        let Alert: UIAlertController = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
+        
+        let CloseAction = UIAlertAction(title: "閉じる", style: .default)
+        Alert.addAction(CloseAction)
+        
+        self.present(Alert, animated: true, completion: nil)
+    }
 
 }
 
