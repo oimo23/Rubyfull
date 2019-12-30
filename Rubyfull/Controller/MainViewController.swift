@@ -20,6 +20,14 @@ class MainViewController: UIViewController, UITextViewDelegate {
     private var textData = TextDataModel()
     private let apiClient = APIClient()
 
+    // MARK: - Viewが読みこまれた時
+    /***************************************************************/
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        inputtedText.delegate = self
+    }
+
     // MARK: - APIとの通信
     /***************************************************************/
     func getHiraganaDataFromAPI(_ unwrappedInputtedText: String) {
