@@ -10,16 +10,16 @@ import UIKit
 
 class MainViewController: UIViewController, UITextViewDelegate {
 
-    // MARK: - IBOutletsの設定
+    // MARK: - IBOutlets、変数の設定
     /***************************************************************/
     @IBOutlet private weak var inputtedText: UITextView!
-    @IBOutlet private weak var converted: UILabel!
+    private var unConverted: String = ""
 
     // MARK: - 必要なモデルのインスタンス化
     /***************************************************************/
     private var textData = TextDataModel()
     private let apiClient = APIClient()
-
+    
     // MARK: - Viewが読みこまれた時
     /***************************************************************/
     override func viewDidLoad() {
@@ -38,9 +38,11 @@ class MainViewController: UIViewController, UITextViewDelegate {
                 self?.textData = textData
 
                 // 固まらないようメインスレッドでUIの更新をする
-                DispatchQueue.main.async {
-                    self?.updateUI()
-                }
+//                DispatchQueue.main.async {
+//                    self?.updateUI()
+//                }
+                
+                self?.performSegue(withIdentifier: "toResult", sender: nil)
             case .failure(let error):
 
                 switch error {
@@ -69,15 +71,17 @@ class MainViewController: UIViewController, UITextViewDelegate {
     @IBAction private func OKButtonTapped(_ sender: Any) {
         self.inputtedText.resignFirstResponder()
         guard let unwrappedInputtedText = self.inputtedText.text else { return }
-
+        
         if(unwrappedInputtedText.isEmpty) {
             showErrorAlert(errorMessage: "入力が空です")
-            return
+            return;
         }
+        
+        self.unConverted = unwrappedInputtedText
 
         getHiraganaDataFromAPI(unwrappedInputtedText)
     }
-
+    
     // MARK: - UITextView外をタッチした時キーボードを引っ込める
     /***************************************************************/
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -85,11 +89,16 @@ class MainViewController: UIViewController, UITextViewDelegate {
             self.inputtedText.resignFirstResponder()
         }
     }
-
-    // MARK: - 画面更新
+    
+    // MARK: - 画面遷移前に挟む処理
     /***************************************************************/
-    func updateUI() {
-        self.converted.text = self.textData.converted
-    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if segue.identifier == "toResult" {
+               let nextView = segue.destination as? ResultViewController
+    
+               nextView?.unConvertedString = self.unConverted
+               nextView?.convertedString = self.textData.converted
+           }
+       }
 
 }
