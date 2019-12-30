@@ -15,8 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Sxk-fc-slO">
+                                <rect key="frame" x="87" y="30" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="g80-1J-j03"/>
+                                    <constraint firstAttribute="width" constant="240" id="xtY-gb-XA3"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ot2-aE-lb2">
-                                <rect key="frame" x="20" y="271" width="374" height="35"/>
+                                <rect key="frame" x="20" y="335" width="374" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="ZUn-jr-Sl3"/>
@@ -29,7 +36,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iAh-Jw-4P1">
-                                <rect key="frame" x="20" y="123" width="374" height="128"/>
+                                <rect key="frame" x="20" y="187" width="374" height="128"/>
                                 <color key="backgroundColor" white="0.95344606164383561" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="zNi-Rx-bfo"/>
@@ -39,7 +46,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本語のテキスト(漢字・かな混じり)を入力すると、ルビに直したテキストを出力します。" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shd-ga-zhG">
-                                <rect key="frame" x="20" y="94" width="374" height="24"/>
+                                <rect key="frame" x="20" y="158" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,13 +55,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="iAh-Jw-4P1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8xr-9y-cnv"/>
-                            <constraint firstItem="shd-ga-zhG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="HpB-Ak-mQg"/>
+                            <constraint firstItem="shd-ga-zhG" firstAttribute="top" secondItem="Sxk-fc-slO" secondAttribute="bottom" id="Dz1-Cc-kPP"/>
                             <constraint firstItem="shd-ga-zhG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="I3l-bQ-DJp"/>
+                            <constraint firstItem="Sxk-fc-slO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JQ3-cq-laE"/>
                             <constraint firstItem="iAh-Jw-4P1" firstAttribute="top" secondItem="shd-ga-zhG" secondAttribute="bottom" constant="5" id="LX3-lB-ONu"/>
                             <constraint firstItem="ot2-aE-lb2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NsD-4x-odc"/>
                             <constraint firstItem="ot2-aE-lb2" firstAttribute="top" secondItem="iAh-Jw-4P1" secondAttribute="bottom" constant="20" id="UVp-hQ-xJx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ot2-aE-lb2" secondAttribute="trailing" constant="20" id="Wdx-gh-3Eg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="shd-ga-zhG" secondAttribute="trailing" constant="20" id="hyE-5V-v3b"/>
+                            <constraint firstItem="Sxk-fc-slO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="lqo-Y4-eZL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iAh-Jw-4P1" secondAttribute="trailing" constant="20" id="qnR-A1-diu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -112,4 +121,7 @@
             <point key="canvasLocation" x="941" y="115"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="720" height="300"/>
+    </resources>
 </document>
