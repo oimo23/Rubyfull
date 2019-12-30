@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         self.present(Alert, animated: true, completion: nil)
     }
 
-    @IBAction func OKButtonTapped(_ sender: Any) {
+    @IBAction private func OKButtonTapped(_ sender: Any) {
         if(self.inputtedText.text!.isEmpty) {
             showErrorAlert(errorMessage: "入力が空です")
             return
