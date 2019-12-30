@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Rubyfull
 //
 //  Created by 伏貫祐樹 on 2019/12/26.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     // MARK: - IBOutletsの設定
     /***************************************************************/
@@ -63,11 +63,6 @@ class ViewController: UIViewController {
             showErrorAlert(errorMessage: "入力が空です")
             return
         }
-
-        //        if(self.inputtedText.text!.isEmpty) {
-        //            showErrorAlert(errorMessage: "入力が空です")
-        //            return
-        //        }
 
         getHiraganaDataFromAPI(unwrappedInputtedText)
     }
