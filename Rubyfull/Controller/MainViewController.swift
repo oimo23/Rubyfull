@@ -38,9 +38,9 @@ class MainViewController: UIViewController, UITextViewDelegate {
                 self?.textData = textData
 
                 // 固まらないようメインスレッドでUIの更新をする
-                //                DispatchQueue.main.async {
-                //                    self?.updateUI()
-                //                }
+                DispatchQueue.main.async {
+                    self?.inputtedText.text = ""
+                }
 
                 self?.performSegue(withIdentifier: "toResult", sender: nil)
             case .failure(let error):
