@@ -59,9 +59,11 @@ class MainViewController: UIViewController {
     }
 
     @IBAction private func OKButtonTapped(_ sender: Any) {
-        guard let unwrappedInputtedText = self.inputtedText.text else {
+        guard let unwrappedInputtedText = self.inputtedText.text else { return }
+        
+        if(unwrappedInputtedText.isEmpty) {
             showErrorAlert(errorMessage: "入力が空です")
-            return
+            return;
         }
 
         getHiraganaDataFromAPI(unwrappedInputtedText)
