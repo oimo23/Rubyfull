@@ -9,6 +9,7 @@ target 'Rubyfull' do
   pod 'Alamofire'
   pod 'SwiftLint'
   pod 'R.swift'
+  pod 'IQKeyboardManagerSwift'
 
   target 'RubyfullTests' do
     inherit! :search_paths
