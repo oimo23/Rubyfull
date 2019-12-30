@@ -8,11 +8,11 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITextViewDelegate {
 
     // MARK: - IBOutletsの設定
     /***************************************************************/
-    @IBOutlet private weak var inputtedText: UITextField!
+    @IBOutlet private weak var inputtedText: UITextView!
     @IBOutlet private weak var converted: UILabel!
 
     // MARK: - 必要なモデルのインスタンス化
@@ -59,14 +59,23 @@ class MainViewController: UIViewController {
     }
 
     @IBAction private func OKButtonTapped(_ sender: Any) {
+        self.inputtedText.resignFirstResponder()
         guard let unwrappedInputtedText = self.inputtedText.text else { return }
-        
+
         if(unwrappedInputtedText.isEmpty) {
             showErrorAlert(errorMessage: "入力が空です")
-            return;
+            return
         }
 
         getHiraganaDataFromAPI(unwrappedInputtedText)
+    }
+
+    // MARK: - UITextView外をタッチした時キーボードを引っ込める
+    /***************************************************************/
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if (self.inputtedText.isFirstResponder) {
+            self.inputtedText.resignFirstResponder()
+        }
     }
 
     // MARK: - 画面更新
