@@ -28,8 +28,8 @@
                                     <action selector="OKButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YU4-5f-Cd7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIo-Nr-dNR">
-                                <rect key="frame" x="183" y="357" width="48" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIo-Nr-dNR">
+                                <rect key="frame" x="20" y="357" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,11 +48,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="iAh-Jw-4P1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8xr-9y-cnv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UIo-Nr-dNR" secondAttribute="trailing" constant="20" id="9hz-nf-9Va"/>
                             <constraint firstItem="UIo-Nr-dNR" firstAttribute="top" secondItem="ot2-aE-lb2" secondAttribute="bottom" constant="50" id="KxK-mc-HQU"/>
                             <constraint firstItem="ot2-aE-lb2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NsD-4x-odc"/>
                             <constraint firstItem="iAh-Jw-4P1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Ouc-xz-T8r"/>
                             <constraint firstItem="ot2-aE-lb2" firstAttribute="top" secondItem="iAh-Jw-4P1" secondAttribute="bottom" constant="20" id="UVp-hQ-xJx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ot2-aE-lb2" secondAttribute="trailing" constant="20" id="Wdx-gh-3Eg"/>
+                            <constraint firstItem="UIo-Nr-dNR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iMl-lh-aSY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iAh-Jw-4P1" secondAttribute="trailing" constant="20" id="qnR-A1-diu"/>
                             <constraint firstItem="UIo-Nr-dNR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r6E-0E-rxl"/>
                         </constraints>
