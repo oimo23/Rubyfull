@@ -22,8 +22,8 @@ class ViewController: UIViewController {
 
     // MARK: - APIとの通信
     /***************************************************************/
-    func getHiraganaDataFromAPI() {
-        self.apiClient.getHiraganaData(inputtedText: self.inputtedText.text!) { [weak self] result in
+    func getHiraganaDataFromAPI(_ unwrappedInputtedText: String) {
+        self.apiClient.getHiraganaData(inputtedText: unwrappedInputtedText) { [weak self] result in
             switch result {
             case .success(let textData):
                 // textDataの中身を受け取ったものに更新する
@@ -59,12 +59,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction private func OKButtonTapped(_ sender: Any) {
-        if(self.inputtedText.text!.isEmpty) {
+        guard let unwrappedInputtedText = self.inputtedText.text else {
             showErrorAlert(errorMessage: "入力が空です")
             return
         }
 
-        getHiraganaDataFromAPI()
+        //        if(self.inputtedText.text!.isEmpty) {
+        //            showErrorAlert(errorMessage: "入力が空です")
+        //            return
+        //        }
+
+        getHiraganaDataFromAPI(unwrappedInputtedText)
     }
 
     // MARK: - 画面更新
