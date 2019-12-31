@@ -39,7 +39,7 @@ extension ResultViewController {
         if self.converted.isFirstResponder {
             self.converted.resignFirstResponder()
         }
-        
+
         if self.unConverted.isFirstResponder {
             self.unConverted.resignFirstResponder()
         }

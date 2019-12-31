@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct ResponseDataModel: Decodable {
+
+    private(set) var converted: String = ""
+    private(set) var output_type: String = ""
+    private(set) var request_id: String = ""
+}
