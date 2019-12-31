@@ -59,17 +59,6 @@ class MainViewController: UIViewController, UITextViewDelegate {
         }
     }
 
-    // MARK: - エラーアラートを出す
-    /***************************************************************/
-    func showErrorAlert(errorMessage: String) {
-        let Alert = UIAlertController(title: "エラーが発生しました", message: errorMessage, preferredStyle: .alert)
-
-        let CloseAction = UIAlertAction(title: "閉じる", style: .default)
-        Alert.addAction(CloseAction)
-
-        self.present(Alert, animated: true, completion: nil)
-    }
-
     @IBAction private func OKButtonTapped(_ sender: Any) {
         self.inputtedText.resignFirstResponder()
         guard let unwrappedInputtedText = self.inputtedText.text else { return }
@@ -82,6 +71,19 @@ class MainViewController: UIViewController, UITextViewDelegate {
         self.unConverted = unwrappedInputtedText
 
         getHiraganaDataFromAPI(unwrappedInputtedText)
+    }
+}
+
+extension MainViewController {
+    // MARK: - エラーアラートを出す
+    /***************************************************************/
+    func showErrorAlert(errorMessage: String) {
+        let Alert = UIAlertController(title: "エラーが発生しました", message: errorMessage, preferredStyle: .alert)
+
+        let CloseAction = UIAlertAction(title: "閉じる", style: .default)
+        Alert.addAction(CloseAction)
+
+        self.present(Alert, animated: true, completion: nil)
     }
 
     // MARK: - UITextView外をタッチした時キーボードを引っ込める
@@ -102,5 +104,4 @@ class MainViewController: UIViewController, UITextViewDelegate {
             nextView?.convertedString = self.textData.converted
         }
     }
-
 }
