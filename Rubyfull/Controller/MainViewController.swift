@@ -74,7 +74,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
         self.inputtedText.resignFirstResponder()
         guard let unwrappedInputtedText = self.inputtedText.text else { return }
 
-        if(unwrappedInputtedText.isEmpty) {
+        if unwrappedInputtedText.isEmpty {
             showErrorAlert(errorMessage: "入力が空です")
             return
         }
@@ -87,7 +87,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
     // MARK: - UITextView外をタッチした時キーボードを引っ込める
     /***************************************************************/
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if (self.inputtedText.isFirstResponder) {
+        if self.inputtedText.isFirstResponder {
             self.inputtedText.resignFirstResponder()
         }
     }
