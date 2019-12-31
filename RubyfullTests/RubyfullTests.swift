@@ -81,14 +81,7 @@ class RubyfullTests: XCTestCase {
         }
         
         // 非同期処理を5秒待つ
-        waitForExpectations(timeout: 5) { (error) in
-            // 5秒以上待機したらエラーとみなす
-            if let error = error {
-                // 5秒以上の待機でもエラー発生とみなす（タイムアウトなど）
-                print(error)
-                XCTFail("ExpectaionTimeOut")
-            }
-        }
+        waitForExpectations(timeout: 5)
     }
 
     func testPerformanceExample() {
