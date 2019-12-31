@@ -10,6 +10,7 @@ target 'Rubyfull' do
   pod 'SwiftLint'
   pod 'R.swift'
   pod 'IQKeyboardManagerSwift', '6.4.2'
+  pod 'PKHUD'
 
   target 'RubyfullTests' do
     inherit! :search_paths
@@ -25,6 +26,7 @@ target 'Rubyfull' do
     pod 'R.swift'
     pod 'IQKeyboardManagerSwift', '6.4.2'
     pod 'Mockingjay', '3.0.0-alpha.1'
+    pod 'PKHUD'
   end
 
 end

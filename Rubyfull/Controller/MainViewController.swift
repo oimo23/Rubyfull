@@ -6,6 +6,7 @@
 //  Copyright © 2019 yuki fushinuki. All rights reserved.
 //
 
+import PKHUD
 import UIKit
 
 class MainViewController: UIViewController, UITextViewDelegate {
@@ -50,10 +51,16 @@ class MainViewController: UIViewController, UITextViewDelegate {
                     // 固まらないようメインスレッドでUIの更新をする
                     DispatchQueue.main.async {
                         self?.inputtedText.text = ""
+                        HUD.hide()
                     }
 
                     self?.performSegue(withIdentifier: "toResult", sender: nil)
                 case .failure(let error):
+
+                    DispatchQueue.main.async {
+                        HUD.hide()
+                    }
+
                     switch error {
                     case .requestError:
                         self?.showErrorAlert(errorMessage: "リクエストエラー")
@@ -78,6 +85,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
             return
         }
 
+        HUD.show(.progress)
         getHiraganaDataFromAPI(unwrappedInputtedText)
     }
 }
