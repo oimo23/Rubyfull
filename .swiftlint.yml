@@ -110,6 +110,7 @@ excluded:
 - Carthage
 - Pods
 - MyLibraryDemoTests
+- Rubyfull/Others
 
 # 1行の文字列制限
 line_length:

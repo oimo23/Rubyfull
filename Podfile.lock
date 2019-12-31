@@ -16,7 +16,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - IQKeyboardManagerSwift
+  - IQKeyboardManagerSwift (= 6.4.2)
   - Mockingjay (= 3.0.0-alpha.1)
   - R.swift
   - SwiftLint
@@ -40,6 +40,6 @@ SPEC CHECKSUMS:
   SwiftLint: 5553187048b900c91aa03552807681bb6b027846
   URITemplate: 58e0d47f967006c5d59888af5356c4a8ed3b197d
 
-PODFILE CHECKSUM: 387414f56c369f880cd73c42385e1c5690882a50
+PODFILE CHECKSUM: c7d8b73ef0add1e7aeb2199cdec04fb1e17805b1
 
 COCOAPODS: 1.7.5
