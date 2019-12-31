@@ -21,5 +21,4 @@ struct Constants {
         self.APP_ID = "ce550ffb884060b4c8ab2d76dc5fb47807c571d158f74dadae37d89d873013e7"
 
     }
-
 }

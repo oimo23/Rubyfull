@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7CC0C723BB58EDB2330E1625 /* Pods_RubyfullUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB364C7A8C7F398217C43D60 /* Pods_RubyfullUITests.framework */; };
 		7D3F3649BE3154BAD641D886 /* Pods_RubyfullTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 419BA027FAC962FDBBFBFD88 /* Pods_RubyfullTests.framework */; };
+		C32CA4D023BA0DBF00089FD8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32CA4CF23BA0DBF00089FD8 /* ResultViewController.swift */; };
 		C363BE1F23B3C0CB001776D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363BE1E23B3C0CB001776D9 /* AppDelegate.swift */; };
 		C363BE2123B3C0CB001776D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363BE2023B3C0CB001776D9 /* SceneDelegate.swift */; };
 		C363BE2323B3C0CB001776D9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363BE2223B3C0CB001776D9 /* MainViewController.swift */; };
@@ -20,6 +21,7 @@
 		C363BE5323B3C254001776D9 /* TextDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363BE5223B3C254001776D9 /* TextDataModel.swift */; };
 		C363BE5523B3C26A001776D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363BE5423B3C26A001776D9 /* Constants.swift */; };
 		C363BE5823B3C292001776D9 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363BE5723B3C292001776D9 /* APIClient.swift */; };
+		C3842D6723BB6D9000C418E7 /* ResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3842D6623BB6D9000C418E7 /* ResponseDataModel.swift */; };
 		FF1F19B1338B5DF3919F394F /* Pods_Rubyfull.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01EE997A2FF8C5B506559E77 /* Pods_Rubyfull.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,7 @@
 		419BA027FAC962FDBBFBFD88 /* Pods_RubyfullTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RubyfullTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47FE29A52DA6DD76187C201C /* Pods-RubyfullTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyfullTests.debug.xcconfig"; path = "Target Support Files/Pods-RubyfullTests/Pods-RubyfullTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0774241D898ACD563552AF2 /* Pods-Rubyfull.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rubyfull.debug.xcconfig"; path = "Target Support Files/Pods-Rubyfull/Pods-Rubyfull.debug.xcconfig"; sourceTree = "<group>"; };
+		C32CA4CF23BA0DBF00089FD8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		C363BE1B23B3C0CB001776D9 /* Rubyfull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rubyfull.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C363BE1E23B3C0CB001776D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C363BE2023B3C0CB001776D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 		C363BE5223B3C254001776D9 /* TextDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDataModel.swift; sourceTree = "<group>"; };
 		C363BE5423B3C26A001776D9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C363BE5723B3C292001776D9 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C3842D6623BB6D9000C418E7 /* ResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDataModel.swift; sourceTree = "<group>"; };
 		CB364C7A8C7F398217C43D60 /* Pods_RubyfullUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RubyfullUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1850E196200A36319903B7B /* Pods-RubyfullUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyfullUITests.release.xcconfig"; path = "Target Support Files/Pods-RubyfullUITests/Pods-RubyfullUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F6046265B1EEC453DF1974D2 /* Pods-RubyfullTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyfullTests.release.xcconfig"; path = "Target Support Files/Pods-RubyfullTests/Pods-RubyfullTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 				C363BE5223B3C254001776D9 /* TextDataModel.swift */,
 				C363BE5423B3C26A001776D9 /* Constants.swift */,
 				C363BE5723B3C292001776D9 /* APIClient.swift */,
+				C3842D6623BB6D9000C418E7 /* ResponseDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				C363BE2223B3C0CB001776D9 /* MainViewController.swift */,
+				C32CA4CF23BA0DBF00089FD8 /* ResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 				C363BE2D23B3C0CD001776D9 /* Sources */,
 				C363BE2E23B3C0CD001776D9 /* Frameworks */,
 				C363BE2F23B3C0CD001776D9 /* Resources */,
+				E836F4FF0C78C0D7E98CAB2E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +266,7 @@
 				C363BE3823B3C0CD001776D9 /* Sources */,
 				C363BE3923B3C0CD001776D9 /* Frameworks */,
 				C363BE3A23B3C0CD001776D9 /* Resources */,
+				5D684189DF2A834C2D88E60B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -407,6 +415,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5D684189DF2A834C2D88E60B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RubyfullUITests/Pods-RubyfullUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RubyfullUITests/Pods-RubyfullUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RubyfullUITests/Pods-RubyfullUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C363BE5C23B7B30A001776D9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,6 +448,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect --format\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		E836F4FF0C78C0D7E98CAB2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RubyfullTests/Pods-RubyfullTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RubyfullTests/Pods-RubyfullTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RubyfullTests/Pods-RubyfullTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		FB57C625B9E313DD06B7BE74 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -450,7 +492,9 @@
 			files = (
 				C363BE5523B3C26A001776D9 /* Constants.swift in Sources */,
 				C363BE2323B3C0CB001776D9 /* MainViewController.swift in Sources */,
+				C32CA4D023BA0DBF00089FD8 /* ResultViewController.swift in Sources */,
 				C363BE1F23B3C0CB001776D9 /* AppDelegate.swift in Sources */,
+				C3842D6723BB6D9000C418E7 /* ResponseDataModel.swift in Sources */,
 				C363BE5323B3C254001776D9 /* TextDataModel.swift in Sources */,
 				C363BE2123B3C0CB001776D9 /* SceneDelegate.swift in Sources */,
 				C363BE5823B3C292001776D9 /* APIClient.swift in Sources */,
@@ -629,6 +673,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 745SLXVGDN;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Rubyfull/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -649,6 +694,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 745SLXVGDN;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Rubyfull/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

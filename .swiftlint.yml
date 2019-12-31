@@ -22,7 +22,6 @@ opt_in_rules:
 - anyobject_protocol
 - array_init
 - attributes
-- closure_body_length
 - closure_end_indentation
 - closure_spacing
 - collection_alignment
@@ -67,7 +66,6 @@ opt_in_rules:
 - multiline_parameters_brackets
 - nimble_operator
 - no_extension_access_modifier
-- no_grouping_extension
 - nslocalizedstring_key
 - number_separator
 - object_literal
@@ -111,6 +109,7 @@ excluded:
 - Carthage
 - Pods
 - MyLibraryDemoTests
+- Rubyfull/Others
 
 # 1行の文字列制限
 line_length:

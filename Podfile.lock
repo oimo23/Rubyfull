@@ -1,28 +1,49 @@
 PODS:
   - Alamofire (4.9.0)
+  - IQKeyboardManagerSwift (6.4.2)
+  - Mockingjay (3.0.0-alpha.1):
+    - Mockingjay/Core (= 3.0.0-alpha.1)
+    - Mockingjay/XCTest (= 3.0.0-alpha.1)
+  - Mockingjay/Core (3.0.0-alpha.1):
+    - URITemplate (~> 3.0)
+  - Mockingjay/XCTest (3.0.0-alpha.1):
+    - Mockingjay/Core
+  - PKHUD (5.3.0)
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
   - SwiftLint (0.35.0)
+  - URITemplate (3.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManagerSwift (= 6.4.2)
+  - Mockingjay (= 3.0.0-alpha.1)
+  - PKHUD
   - R.swift
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - IQKeyboardManagerSwift
+    - Mockingjay
+    - PKHUD
     - R.swift
     - R.swift.Library
     - SwiftLint
+    - URITemplate
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  IQKeyboardManagerSwift: 79a3ec200dfb41cb66a89b8575417b5378107c5d
+  Mockingjay: 0f7c5aa49c7f1b95621cee3c79b557141f5a225c
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   SwiftLint: 5553187048b900c91aa03552807681bb6b027846
+  URITemplate: 58e0d47f967006c5d59888af5356c4a8ed3b197d
 
-PODFILE CHECKSUM: 6aeb202cf40e1b134751a15ed2b91f2ffbff5446
+PODFILE CHECKSUM: 2160a844121e619428ec595644c4f9f1078b3049
 
 COCOAPODS: 1.7.5
