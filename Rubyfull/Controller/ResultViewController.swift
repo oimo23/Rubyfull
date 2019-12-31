@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+class ResultViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet private weak var converted: UITextView!
     @IBOutlet private weak var unConverted: UITextView!
@@ -27,4 +27,21 @@ class ResultViewController: UIViewController {
         self.unConverted.text = self.unConvertedString
     }
 
+}
+
+// MARK: - UI関係
+/***************************************************************/
+extension ResultViewController {
+    // MARK: - UITextView外をタッチした時キーボードを引っ込める
+    /***************************************************************/
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+        if self.converted.isFirstResponder {
+            self.converted.resignFirstResponder()
+        }
+        
+        if self.unConverted.isFirstResponder {
+            self.unConverted.resignFirstResponder()
+        }
+    }
 }

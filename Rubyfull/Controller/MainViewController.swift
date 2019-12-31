@@ -101,12 +101,12 @@ extension MainViewController {
 
     // MARK: - UITextView外をタッチした時キーボードを引っ込める
     /***************************************************************/
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
-        if self.inputtedText.isFirstResponder {
-            self.inputtedText.resignFirstResponder()
-        }
-    }
+    //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    //
+    //        if self.inputtedText.isFirstResponder {
+    //            self.inputtedText.resignFirstResponder()
+    //        }
+    //    }
 
     // MARK: - 画面遷移前に挟む処理
     /***************************************************************/
