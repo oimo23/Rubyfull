@@ -19,6 +19,7 @@ class ResultViewController: UIViewController {
     // MARK: - Viewが読みこまれた時
     /***************************************************************/
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 

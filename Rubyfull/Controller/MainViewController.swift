@@ -23,6 +23,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
     // MARK: - Viewが読みこまれた時
     /***************************************************************/
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         inputtedText.delegate = self
@@ -31,6 +32,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
     // MARK: - APIとの通信
     /***************************************************************/
     func getHiraganaDataFromAPI(_ unwrappedInputtedText: String) {
+        
         self.apiClient.getHiraganaData(
             inputtedText: unwrappedInputtedText,
             requestURI: Constants.shared.HIRAGANA_API_URL ) { [weak self] result in
@@ -46,7 +48,6 @@ class MainViewController: UIViewController, UITextViewDelegate {
 
                     self?.performSegue(withIdentifier: "toResult", sender: nil)
                 case .failure(let error):
-
                     switch error {
                     case .requestError:
                         self?.showErrorAlert(errorMessage: "リクエストエラー")
@@ -62,6 +63,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
     // MARK: - OKのボタンがクリックされたとき
     /***************************************************************/
     @IBAction private func OKButtonTapped(_ sender: Any) {
+        
         self.inputtedText.resignFirstResponder()
         guard let unwrappedInputtedText = self.inputtedText.text else { return }
 
@@ -80,9 +82,11 @@ class MainViewController: UIViewController, UITextViewDelegate {
 // MARK: - UI系
 /***************************************************************/
 extension MainViewController {
+    
     // MARK: - エラーアラートを出す
     /***************************************************************/
     func showErrorAlert(errorMessage: String) {
+        
         let Alert = UIAlertController(title: "エラーが発生しました", message: errorMessage, preferredStyle: .alert)
 
         let CloseAction = UIAlertAction(title: "閉じる", style: .default)
@@ -94,6 +98,7 @@ extension MainViewController {
     // MARK: - UITextView外をタッチした時キーボードを引っ込める
     /***************************************************************/
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
         if self.inputtedText.isFirstResponder {
             self.inputtedText.resignFirstResponder()
         }
@@ -102,6 +107,7 @@ extension MainViewController {
     // MARK: - 画面遷移前に挟む処理
     /***************************************************************/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "toResult" {
             let nextView = segue.destination as? ResultViewController
 
