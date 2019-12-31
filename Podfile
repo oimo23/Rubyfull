@@ -8,7 +8,6 @@ target 'Rubyfull' do
   # Pods for Rubyfull
   pod 'Alamofire'
   pod 'SwiftLint'
-  pod 'R.swift'
   pod 'IQKeyboardManagerSwift', '6.4.2'
   pod 'PKHUD'
 
@@ -23,7 +22,6 @@ target 'Rubyfull' do
     # Pods for testing
     pod 'Alamofire'
     pod 'SwiftLint'
-    pod 'R.swift'
     pod 'IQKeyboardManagerSwift', '6.4.2'
     pod 'Mockingjay', '3.0.0-alpha.1'
     pod 'PKHUD'
