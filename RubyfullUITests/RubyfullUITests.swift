@@ -23,13 +23,40 @@ class RubyfullUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    // MARK: - TextViewが普通に入力できる
+    /***************************************************************/
+    func testTextView() {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let textView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element
+
+        textView.tap()
+        let key = app/*@START_MENU_TOKEN@*/.keys["た"]/*[[".keyboards.keys[\"た\"]",".keys[\"た\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        key.tap()
+        key.tap()
+        app/*@START_MENU_TOKEN@*/.keys["さ"]/*[[".keyboards.keys[\"さ\"]",".keys[\"さ\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
+        key.tap()
+        key.tap()
+        app.toolbars["Toolbar"].buttons["Done"].tap()
+
+        XCTAssertEqual(textView.value as! String, "ちすち")
+    }
+    
+    // MARK: - TextViewが空のままいきなりOKボタンを押すとエラーが出る
+    /***************************************************************/
+    func testOKButton() {
+        
+        let app = XCUIApplication()
+//        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
+        
+        app.buttons["OK"].tap()
+        
+        XCTAssert(app.alerts.element.staticTexts["入力が空です"].exists)
+        
     }
 
     func testLaunchPerformance() {
