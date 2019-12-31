@@ -10,8 +10,8 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
-    @IBOutlet private weak var converted: UILabel!
-    @IBOutlet private weak var unConverted: UILabel!
+    @IBOutlet private weak var converted: UITextView!
+    @IBOutlet private weak var unConverted: UITextView!
 
     var unConvertedString: String = ""
     var convertedString: String = ""
