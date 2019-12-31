@@ -11,7 +11,7 @@ import UIKit
 
 class MainViewController: UIViewController, UITextViewDelegate {
 
-    // MARK: - IBOutlets、変数の設定
+    // MARK: - IBOutletsの設定
     /***************************************************************/
     @IBOutlet private weak var inputtedText: UITextView!
 
@@ -41,10 +41,12 @@ class MainViewController: UIViewController, UITextViewDelegate {
                 case .success(let responseData):
                     // responseDataの中身を受け取ったものに更新する
                     self?.responseData = responseData
-
+                    
+                    // OptionalのUnwrapを行う
                     guard let converted = self?.responseData.converted else { return }
                     guard let unwrappedInputtedText = self?.inputtedText.text else { return }
-
+                    
+                    // textDataを取得して来たものに更新
                     self?.textData.converted = converted
                     self?.textData.unConverted = unwrappedInputtedText
 
@@ -60,6 +62,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
                         HUD.hide()
                     }
                     
+                    // エラーの種類によってメッセージを分岐
                     switch error {
                     case .requestError:
                         self?.showErrorAlert(errorMessage: "リクエストエラー")
@@ -75,16 +78,21 @@ class MainViewController: UIViewController, UITextViewDelegate {
     // MARK: - OKのボタンがクリックされたとき
     /***************************************************************/
     @IBAction private func OKButtonTapped(_ sender: Any) {
-
+        // キーボードを引っ込める
         self.inputtedText.resignFirstResponder()
+        
         guard let unwrappedInputtedText = self.inputtedText.text else { return }
-
+        
+        // 入力が空ならエラーを通知
         if unwrappedInputtedText.isEmpty {
             showErrorAlert(errorMessage: "入力が空です")
             return
         }
         
+        // ロード中である旨を示すUIを表示
         HUD.show(.progress)
+        
+        // APIを叩くための関数を発動
         getHiraganaDataFromAPI(unwrappedInputtedText)
     }
 }

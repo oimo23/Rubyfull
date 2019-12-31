@@ -52,7 +52,6 @@ class RubyfullTests: XCTestCase {
         waitForExpectations(timeout: 5) { (error) in
             if let error = error {
                 // 5秒以上の待機でもエラー発生とみなす（タイムアウトなど）
-                print(error)
                 XCTFail("ExpectaionTimeOut")
             }
         }
