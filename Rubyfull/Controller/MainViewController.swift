@@ -56,11 +56,10 @@ class MainViewController: UIViewController, UITextViewDelegate {
 
                     self?.performSegue(withIdentifier: "toResult", sender: nil)
                 case .failure(let error):
-
                     DispatchQueue.main.async {
                         HUD.hide()
                     }
-
+                    
                     switch error {
                     case .requestError:
                         self?.showErrorAlert(errorMessage: "リクエストエラー")
@@ -84,7 +83,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
             showErrorAlert(errorMessage: "入力が空です")
             return
         }
-
+        
         HUD.show(.progress)
         getHiraganaDataFromAPI(unwrappedInputtedText)
     }
