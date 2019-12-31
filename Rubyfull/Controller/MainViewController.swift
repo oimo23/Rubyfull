@@ -31,29 +31,31 @@ class MainViewController: UIViewController, UITextViewDelegate {
     // MARK: - APIとの通信
     /***************************************************************/
     func getHiraganaDataFromAPI(_ unwrappedInputtedText: String) {
-        self.apiClient.getHiraganaData(inputtedText: unwrappedInputtedText) { [weak self] result in
-            switch result {
-            case .success(let textData):
-                // textDataの中身を受け取ったものに更新する
-                self?.textData = textData
+        self.apiClient.getHiraganaData(
+            inputtedText: unwrappedInputtedText,
+            requestURI: Constants.shared.HIRAGANA_API_URL ) { [weak self] result in
+                switch result {
+                case .success(let textData):
+                    // textDataの中身を受け取ったものに更新する
+                    self?.textData = textData
 
-                // 固まらないようメインスレッドでUIの更新をする
-                DispatchQueue.main.async {
-                    self?.inputtedText.text = ""
+                    // 固まらないようメインスレッドでUIの更新をする
+                    DispatchQueue.main.async {
+                        self?.inputtedText.text = ""
+                    }
+
+                    self?.performSegue(withIdentifier: "toResult", sender: nil)
+                case .failure(let error):
+
+                    switch error {
+                    case .requestError:
+                        self?.showErrorAlert(errorMessage: "リクエストエラー")
+                    case .responseError:
+                        self?.showErrorAlert(errorMessage: "レスポンスエラー")
+                    case .unknownError:
+                        self?.showErrorAlert(errorMessage: "不明なエラー")
+                    }
                 }
-
-                self?.performSegue(withIdentifier: "toResult", sender: nil)
-            case .failure(let error):
-
-                switch error {
-                case .requestError:
-                    self?.showErrorAlert(errorMessage: "リクエストエラー")
-                case .responseError:
-                    self?.showErrorAlert(errorMessage: "レスポンスエラー")
-                case .unknownError:
-                    self?.showErrorAlert(errorMessage: "不明なエラー")
-                }
-            }
         }
     }
 

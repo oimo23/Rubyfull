@@ -18,10 +18,11 @@ enum APIClientError: Swift.Error {
 final class APIClient {
     func getHiraganaData(
         inputtedText: String,
+        requestURI: String,
         completion: @escaping((Swift.Result<TextDataModel, APIClientError>) -> Void)
     ) {
         Alamofire.request(
-            Constants.shared.HIRAGANA_API_URL, // リクエスト先のURL
+            requestURI, // リクエスト先のURL
             method: .post,
             parameters: [
                 "app_id": Constants.shared.APP_ID,

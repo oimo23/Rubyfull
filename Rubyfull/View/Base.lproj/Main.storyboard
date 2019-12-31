@@ -54,17 +54,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="iAh-Jw-4P1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8xr-9y-cnv"/>
-                            <constraint firstItem="shd-ga-zhG" firstAttribute="top" secondItem="Sxk-fc-slO" secondAttribute="bottom" id="Dz1-Cc-kPP"/>
-                            <constraint firstItem="shd-ga-zhG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="I3l-bQ-DJp"/>
-                            <constraint firstItem="Sxk-fc-slO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JQ3-cq-laE"/>
-                            <constraint firstItem="iAh-Jw-4P1" firstAttribute="top" secondItem="shd-ga-zhG" secondAttribute="bottom" constant="5" id="LX3-lB-ONu"/>
-                            <constraint firstItem="ot2-aE-lb2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NsD-4x-odc"/>
-                            <constraint firstItem="ot2-aE-lb2" firstAttribute="top" secondItem="iAh-Jw-4P1" secondAttribute="bottom" constant="20" id="UVp-hQ-xJx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ot2-aE-lb2" secondAttribute="trailing" constant="20" id="Wdx-gh-3Eg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="shd-ga-zhG" secondAttribute="trailing" constant="20" id="hyE-5V-v3b"/>
-                            <constraint firstItem="Sxk-fc-slO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="lqo-Y4-eZL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iAh-Jw-4P1" secondAttribute="trailing" constant="20" id="qnR-A1-diu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iAh-Jw-4P1" secondAttribute="trailing" constant="20" id="5jL-7c-Psb"/>
+                            <constraint firstItem="Sxk-fc-slO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="9is-LP-Goq"/>
+                            <constraint firstItem="ot2-aE-lb2" firstAttribute="top" secondItem="iAh-Jw-4P1" secondAttribute="bottom" constant="20" id="EqY-97-hvE"/>
+                            <constraint firstItem="iAh-Jw-4P1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="R5z-Aw-Bo3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="shd-ga-zhG" secondAttribute="trailing" constant="20" id="Rms-p0-5Pa"/>
+                            <constraint firstItem="ot2-aE-lb2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SGB-8L-2Li"/>
+                            <constraint firstItem="shd-ga-zhG" firstAttribute="top" secondItem="Sxk-fc-slO" secondAttribute="bottom" id="jVH-ZJ-tT2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ot2-aE-lb2" secondAttribute="trailing" constant="20" id="oqC-Ng-Gvt"/>
+                            <constraint firstItem="shd-ga-zhG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="t9T-FI-c73"/>
+                            <constraint firstItem="iAh-Jw-4P1" firstAttribute="top" secondItem="shd-ga-zhG" secondAttribute="bottom" constant="5" id="tld-zf-2NM"/>
+                            <constraint firstItem="Sxk-fc-slO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xue-Tu-zVc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
