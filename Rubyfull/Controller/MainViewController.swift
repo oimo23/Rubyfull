@@ -58,7 +58,9 @@ class MainViewController: UIViewController, UITextViewDelegate {
                 }
         }
     }
-
+    
+    // MARK: - OKのボタンがクリックされたとき
+    /***************************************************************/
     @IBAction private func OKButtonTapped(_ sender: Any) {
         self.inputtedText.resignFirstResponder()
         guard let unwrappedInputtedText = self.inputtedText.text else { return }
@@ -74,6 +76,9 @@ class MainViewController: UIViewController, UITextViewDelegate {
     }
 }
 
+
+// MARK: - UI系
+/***************************************************************/
 extension MainViewController {
     // MARK: - エラーアラートを出す
     /***************************************************************/
@@ -85,7 +90,7 @@ extension MainViewController {
 
         self.present(Alert, animated: true, completion: nil)
     }
-
+    
     // MARK: - UITextView外をタッチした時キーボードを引っ込める
     /***************************************************************/
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
