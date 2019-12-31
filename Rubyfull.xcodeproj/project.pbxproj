@@ -10,6 +10,7 @@
 		7CC0C723BB58EDB2330E1625 /* Pods_RubyfullUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB364C7A8C7F398217C43D60 /* Pods_RubyfullUITests.framework */; };
 		7D3F3649BE3154BAD641D886 /* Pods_RubyfullTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 419BA027FAC962FDBBFBFD88 /* Pods_RubyfullTests.framework */; };
 		C32CA4D023BA0DBF00089FD8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32CA4CF23BA0DBF00089FD8 /* ResultViewController.swift */; };
+		C32CA4D423BB515D00089FD8 /* ReponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32CA4D323BB515D00089FD8 /* ReponseDataModel.swift */; };
 		C363BE1F23B3C0CB001776D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363BE1E23B3C0CB001776D9 /* AppDelegate.swift */; };
 		C363BE2123B3C0CB001776D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363BE2023B3C0CB001776D9 /* SceneDelegate.swift */; };
 		C363BE2323B3C0CB001776D9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C363BE2223B3C0CB001776D9 /* MainViewController.swift */; };
@@ -48,6 +49,7 @@
 		47FE29A52DA6DD76187C201C /* Pods-RubyfullTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RubyfullTests.debug.xcconfig"; path = "Target Support Files/Pods-RubyfullTests/Pods-RubyfullTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0774241D898ACD563552AF2 /* Pods-Rubyfull.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rubyfull.debug.xcconfig"; path = "Target Support Files/Pods-Rubyfull/Pods-Rubyfull.debug.xcconfig"; sourceTree = "<group>"; };
 		C32CA4CF23BA0DBF00089FD8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		C32CA4D323BB515D00089FD8 /* ReponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReponseDataModel.swift; sourceTree = "<group>"; };
 		C363BE1B23B3C0CB001776D9 /* Rubyfull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rubyfull.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C363BE1E23B3C0CB001776D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C363BE2023B3C0CB001776D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				C363BE5223B3C254001776D9 /* TextDataModel.swift */,
 				C363BE5423B3C26A001776D9 /* Constants.swift */,
 				C363BE5723B3C292001776D9 /* APIClient.swift */,
+				C32CA4D323BB515D00089FD8 /* ReponseDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32CA4D423BB515D00089FD8 /* ReponseDataModel.swift in Sources */,
 				C363BE5523B3C26A001776D9 /* Constants.swift in Sources */,
 				C363BE2323B3C0CB001776D9 /* MainViewController.swift in Sources */,
 				C32CA4D023BA0DBF00089FD8 /* ResultViewController.swift in Sources */,

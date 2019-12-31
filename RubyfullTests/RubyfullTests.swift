@@ -37,10 +37,10 @@ class RubyfullTests: XCTestCase {
             requestURI: "https://www.must-be-success.com/" ) { result in
                 switch result {
                 case .success(let data):
-                    var textData = TextDataModel()
-                    textData = data
+                    var responseData = ResponseDataModel()
+                    responseData = data
                 
-                    XCTAssertEqual(textData.converted, "かんじが まざっている ぶんしょう")
+                    XCTAssertEqual(responseData.converted, "かんじが まざっている ぶんしょう")
                     
                     expect.fulfill()
                 case .failure(_):
