@@ -77,7 +77,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
 
     // MARK: - OKのボタンがクリックされたとき
     /***************************************************************/
-    @IBAction private func OKButtonTapped(_ sender: Any) {
+    @IBAction private func okButtonTapped(_ sender: Any) {
         // キーボードを引っ込める
         self.inputtedText.resignFirstResponder()
 
